@@ -1,115 +1,88 @@
-✈️ British Airways Data Science Project
+# ✈️ British Airways Data Science Project
 
-📚 Background Information
+## 📚 Background Information
 
-📌 Task 1: Customer Feedback Analysis
+### 📌 Task 1: Customer Feedback Analysis
+British Airways (BA) operates thousands of flights daily across the world. Understanding customer feedback is crucial to improving service quality. This task focuses on **scraping and analyzing customer reviews** to extract insights and enhance customer satisfaction.
 
-British Airways (BA) operates thousands of flights daily across the world. Understanding customer feedback is crucial to improving service quality. This task focuses on scraping and analyzing customer reviews to extract insights and enhance customer satisfaction.
+### 📌 Task 2: Customer Booking Prediction Model
+In a competitive airline market, predicting customer behavior is essential. This task involves building a **predictive model** using booking data to identify whether a customer will purchase a holiday, helping BA make data-driven decisions.
 
-📌 Task 2: Customer Booking Prediction Model
+---
 
-In a competitive airline market, predicting customer behavior is essential. This task involves building a predictive model using booking data to identify whether a customer will purchase a holiday, helping BA make data-driven decisions.
+## 📂 Dataset Information
 
-📂 Dataset Information
+- **Task 1 Dataset (Customer Feedback)**
+    - **Source:** Web-scraped from [airlinequality.com](https://www.airlinequality.com/)
+    - **Key Columns:**
+      - `reviews`: Raw customer reviews
+      - `Cleaned Reviews`: Processed text
+      - `Sentiment`: Sentiment score (Positive, Negative, Neutral)
 
-Task 1 Dataset (Customer Feedback)
+- **Task 2 Dataset (Customer Booking Data)**
+    - **Source:** Customer booking records
+    - **Goal:** Predict holiday purchase (Yes/No)
 
-Source: Web-scraped from airlinequality.com
+## 🔍 Key Tasks Performed
 
-Key Columns:
+### Task 1: Customer Feedback Analysis
+1. **Data Collection:** Web scraping with BeautifulSoup.
+2. **Data Cleaning:** Removing noise, tokenization, and stopword removal.
+3. **Sentiment Analysis:** Using **VADER** to classify reviews into positive, negative, or neutral.
+4. **Visualization:** Pie charts for sentiment distribution and word clouds for common terms.
 
-reviews: Raw customer reviews
+### Task 2: Customer Booking Prediction Model
+1. **Data Preprocessing:** Handling missing data and encoding categorical variables.
+2. **Model Building:** Training models like Logistic Regression and Random Forest.
+3. **Evaluation:** Measuring performance with accuracy, precision, recall, and F1-score.
 
-Cleaned Reviews: Processed text
+## 📈 Results and Insights
 
-Sentiment: Sentiment score (Positive, Negative, Neutral)
+### Task 1: Sentiment Analysis
+- **Positive:** 45.8% of reviews
+- **Negative:** 42.8% of reviews
+- **Neutral:** 11.4% of reviews
 
-Task 2 Dataset (Customer Booking Data)
+**Insights:**
+- Negative reviews often mention delays and poor service.
+- Positive reviews highlight premium class comfort.
 
-Source: Customer booking records
+### Task 2: Predictive Model
+- **Model Accuracy:** 87%
+- **Key Predictors:** Age, location, booking lead time, and travel class.
 
-Goal: Predict holiday purchase (Yes/No)
+## ▶️ How to Run the Project
 
-🔍 Key Tasks Performed
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/yourusername/british-airways-analysis.git
+   cd british-airways-analysis
+   ```
 
-Task 1: Customer Feedback Analysis
+2. Install dependencies:
+   ```bash
+   pip install -r requirements.txt
+   ```
 
-Data Collection: Web scraping with BeautifulSoup.
+3. Run the analysis:
+   ```bash
+   python main.py
+   ```
 
-Data Cleaning: Removing noise, tokenization, and stopword removal.
+## 📊 Output
+- **BritishAirways_review.csv**: Cleaned dataset
+- Sentiment pie chart
+- Word cloud
+- Model performance report
 
-Sentiment Analysis: Using VADER to classify reviews into positive, negative, or neutral.
+## 📌 Future Improvements
+- Use advanced models (e.g., BERT) for sentiment analysis.
+- Perform topic modeling for deeper insights.
+- Optimize the prediction model with hyperparameter tuning.
 
-Visualization: Pie charts for sentiment distribution and word clouds for common terms.
-
-Task 2: Customer Booking Prediction Model
-
-Data Preprocessing: Handling missing data and encoding categorical variables.
-
-Model Building: Training models like Logistic Regression and Random Forest.
-
-Evaluation: Measuring performance with accuracy, precision, recall, and F1-score.
-
-📈 Results and Insights
-
-Task 1: Sentiment Analysis
-
-Positive: 45.8% of reviews
-
-Negative: 42.8% of reviews
-
-Neutral: 11.4% of reviews
-
-Insights:
-
-Negative reviews often mention delays and poor service.
-
-Positive reviews highlight premium class comfort.
-
-Task 2: Predictive Model
-
-Model Accuracy: 87%
-
-Key Predictors: Age, location, booking lead time, and travel class.
-
-▶️ How to Run the Project
-
-Clone the repository:
-
-git clone https://github.com/yourusername/british-airways-analysis.git
-cd british-airways-analysis
-
-Install dependencies:
-
-pip install -r requirements.txt
-
-Run the analysis:
-
-python main.py
-
-📊 Output
-
-BritishAirways_review.csv: Cleaned dataset
-
-Sentiment pie chart
-
-Word cloud
-
-Model performance report
-
-📌 Future Improvements
-
-Use advanced models (e.g., BERT) for sentiment analysis.
-
-Perform topic modeling for deeper insights.
-
-Optimize the prediction model with hyperparameter tuning.
-
-🤝 Contribution
-
+## 🤝 Contribution
 Contributions are welcome! Fork the repo and submit a pull request.
 
-📄 License
-
+## 📄 License
 This project is licensed under the MIT License.
 
